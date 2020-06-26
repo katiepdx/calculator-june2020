@@ -1,3 +1,6 @@
+// This imports all the functions from the utils.js file
+import { add, subtraction, multiplication, division } from './utils.js';
+
 //ADDITION
 // get dom elements
 // get add-input-1
@@ -17,11 +20,11 @@ boogerButton.addEventListener('click', () => {
     // make sure we have the inputs (console.log)
     // make sure we have the span
     // make sure we have the .values of the inputs
-    const value1 = addInput1.value;
-    const value2 = addInput2.value;
+    const additionNum1 = addInput1.value;
+    const additionNum2 = addInput2.value;
 
     // add the two values together
-    const sum = Number(value1) + Number(value2);
+    const sum = add(additionNum1, additionNum2);
 
     // update the textContent of the span
     boogerSpan.textContent = sum;
@@ -57,7 +60,7 @@ subtractionButton.addEventListener('click', () => {
     // console.log(subtractionNum1, subtractionNum2);
     
     //Subtract num1 from num2
-    const subtractNumers = Number(subtractionNum1) - Number(subtractionNum2);
+    const subtractNumers = subtraction(subtractionNum1, subtractionNum2)
     
     //Print result to span
     subtractionResult.textContent = subtractNumers;
@@ -85,7 +88,7 @@ multiplicationButton.addEventListener('click', () => {
     // console.log(multiplicationNum1, multiplicationNum2);
 
     // multiply numbers together
-    const multiplyNumbers = Number(multiplicationNum1) * Number(multiplicationNum2);
+    const multiplyNumbers = multiplication(multiplicationNum1, multiplicationNum2);
     
     //Print result to mult span 
     multiplicationResult.textContent = multiplyNumbers;
@@ -112,7 +115,7 @@ divisionButton.addEventListener('click', () => {
     console.log(divisionNum1, divisionNum2);
 
     //divide divi num1 by divi num2
-    const divideNumbers = Number(divisionNum1) / Number(divisionNum2);
+    const divideNumbers = division(divisionNum1, divisionNum2);
 
     //Print the result to divi result span 
     divisionResult.textContent = divideNumbers;

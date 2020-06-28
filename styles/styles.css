@@ -32,6 +32,7 @@ header {
     background-color:  #A6D8D4;
     display: flex;
     justify-content: center;
+    text-align: center;
     font-size: 3rem;
     color: #323b3b;
     font-family: 'Courier New', Courier, monospace;
